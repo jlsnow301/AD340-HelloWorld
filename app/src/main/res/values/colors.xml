@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFC107</color>
-    <color name="colorPrimaryDark">#FFA000</color>
-    <color name="colorAccent">#009688</color>
-    <color name="forecast_item_background">#E9E9E9</color>
+    <color name="colorPrimary">#09161d</color>
+    <color name="colorPrimaryDark">#040b0f</color>
+    <color name="colorAccent">#0e242f</color>
+    <color name="forecast_item_background">#050d12</color>
 </resources>

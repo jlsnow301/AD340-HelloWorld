@@ -11,4 +11,7 @@
     <string name="display_units_dismiss">Restart to apply settings.</string>
     <string name="show_f">Show using F°</string>
     <string name="show_c">Show using C°</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
