@@ -9,7 +9,7 @@
     tools:context=".location.LocationEntryFragment">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter your zipcode:"
@@ -24,15 +24,16 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:src="@drawable/ic_place_black_24dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView1"
-        app:layout_constraintEnd_toEndOf="@+id/textView1"
-        app:layout_constraintStart_toStartOf="@+id/textView1" />
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
 
     <EditText
         android:id="@+id/zipcodeEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+
         android:hint="Enter zipcode"
         android:inputType="number"
         android:textColorHint="#FFFFFF"

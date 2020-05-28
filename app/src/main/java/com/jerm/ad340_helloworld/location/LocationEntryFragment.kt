@@ -14,7 +14,6 @@ import android.widget.Toast
 import com.jerm.ad340_helloworld.AppNavigator
 import com.jerm.ad340_helloworld.DailyForecast
 import com.jerm.ad340_helloworld.R
-import com.jerm.ad340_helloworld.details.ForecastDetailsActivity
 
 /**
  * A simple [Fragment] subclass.

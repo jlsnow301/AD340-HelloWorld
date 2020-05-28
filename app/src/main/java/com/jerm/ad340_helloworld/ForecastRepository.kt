@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import kotlin.random.Random
 
-data class ForecastRepository(val _weeklyForecast: MutableLiveData<List<DailyForecast>>) {
+class ForecastRepository {
 
-    // Not sure if I can do this, I needed a variable as a parameter
+    private val _weeklyForecast = MutableLiveData<List<DailyForecast>>()
     val weeklyForecast: LiveData<List<DailyForecast>> = _weeklyForecast
 
     fun loadForecast(zipcode: String){
