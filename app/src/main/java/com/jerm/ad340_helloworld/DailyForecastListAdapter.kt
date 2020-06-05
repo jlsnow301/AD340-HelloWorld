@@ -3,14 +3,14 @@ package com.jerm.ad340_helloworld
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.ImageView
-import androidx.recyclerview.widget.AsyncDifferConfig
+import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.jerm.ad340_helloworld.api.DailyForecast
+
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,7 +32,6 @@ class DailyForecastViewHolder(
         dateText.text = DATE_FORMAT.format(Date(dailyForecast.date * 1000))
 
         val iconId = dailyForecast.weather[0].icon
-
         forecastIcon.load("http://openweathermap.org/img/wn/${iconId}@2x.png")
     }
 }
@@ -46,7 +45,6 @@ class DailyForecastListAdapter(
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_daily_forecast, parent, false)
         return DailyForecastViewHolder(itemView, tempDisplaySettingManager)
     }
-
     override fun onBindViewHolder(holder: DailyForecastViewHolder, position: Int) {
         holder.bind(getItem(position))
         holder.itemView.setOnClickListener {
@@ -56,10 +54,10 @@ class DailyForecastListAdapter(
 
     companion object {
         val DIFF_CONFIG = object: DiffUtil.ItemCallback<DailyForecast>() {
+
             override fun areItemsTheSame(oldItem: DailyForecast, newItem: DailyForecast): Boolean {
                 return oldItem === newItem
             }
-
             override fun areContentsTheSame(
                 oldItem: DailyForecast,
                 newItem: DailyForecast

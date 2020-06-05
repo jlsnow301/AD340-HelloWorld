@@ -14,7 +14,7 @@ import com.jerm.ad340_helloworld.LocationRepository
 import com.jerm.ad340_helloworld.R
 
 /**
- * A simple [Fragment] subclass.
+ * Saves locations based on zip
  */
 class LocationEntryFragment : Fragment() {
 
@@ -28,7 +28,6 @@ class LocationEntryFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_location_entry, container, false)
 
         locationRepository = LocationRepository(requireContext())
-
         val zipcodeEditText: EditText = view.findViewById(R.id.zipcodeEditText)
         val enterButton: Button = view.findViewById(R.id.enterButton)
 
@@ -44,5 +43,4 @@ class LocationEntryFragment : Fragment() {
 
         return view
     }
-
 }

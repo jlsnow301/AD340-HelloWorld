@@ -5,11 +5,10 @@ import android.security.keystore.KeyNotYetValidException
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
-private const val KEY_ZIPCODE = "key_zipcode"
-
 sealed class Location {
     data class Zipcode(val zipcode: String) : Location()
 }
+private const val KEY_ZIPCODE = "key_zipcode"
 
 class LocationRepository(context: Context) {
 

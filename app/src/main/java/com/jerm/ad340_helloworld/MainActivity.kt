@@ -12,7 +12,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.jerm.ad340_helloworld.forecast.CurrentForecastFragmentDirections
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tempDisplaySettingManager: TempDisplaySettingManager
@@ -20,8 +19,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        tempDisplaySettingManager = TempDisplaySettingManager(this)
 
         tempDisplaySettingManager = TempDisplaySettingManager(this)
 
@@ -41,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection
+        // Item selection
         return when (item.itemId) {
             R.id.tempDisplaySetting -> {
                 showTempDisplaySettingDialog(this, tempDisplaySettingManager)

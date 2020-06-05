@@ -10,6 +10,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import java.util.Date
 import kotlin.random.Random
 
 class ForecastRepository {
@@ -27,7 +28,7 @@ class ForecastRepository {
         val call = weatherService.currentWeather(zipcode, BuildConfig.OPEN_WEATHER_MAP_API_KEY, "imperial")
         call.enqueue(object : Callback<CurrentWeather> {
             override fun onFailure(call: Call<CurrentWeather>, t: Throwable) {
-                Log.e(ForecastRepository::class.java.simpleName, "error loading current weather", t)
+                Log.e(ForecastRepository::class.java.simpleName, "Error loading current weather", t)
             }
 
             override fun onResponse(call: Call<CurrentWeather>, response: Response<CurrentWeather>) {
@@ -43,7 +44,7 @@ class ForecastRepository {
         val call = weatherService.currentWeather(zipcode, BuildConfig.OPEN_WEATHER_MAP_API_KEY, "imperial")
         call.enqueue(object : Callback<CurrentWeather> {
             override fun onFailure(call: Call<CurrentWeather>, t: Throwable) {
-                Log.e(ForecastRepository::class.java.simpleName, "error loading location for weekly forecast", t)
+                Log.e(ForecastRepository::class.java.simpleName, "Error loading location for weekly forecast", t)
             }
 
             override fun onResponse(call: Call<CurrentWeather>, response: Response<CurrentWeather>) {
@@ -73,7 +74,9 @@ class ForecastRepository {
                 }
             }
         })
+
     }
+
 
     private fun getTempDescription(temp: Float) : String {
         return when(temp){

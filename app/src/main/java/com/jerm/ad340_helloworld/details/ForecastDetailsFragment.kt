@@ -32,7 +32,7 @@ class ForecastDetailsFragment : Fragment() {
         tempText.text = formatTempForDisplay(args.temp, tempDisplaySettingManager.getTempDisplaySetting())
         descriptionText.text = args.description
         dateText.text = DATE_FORMAT.format(Date(args.date * 1000))
-        forecastIcon.load("Http://openweathermap.org/img/wn/${args.icon}@2x.png")
+        forecastIcon.load("http://openweathermap.org/img/wn/${args.icon}@2x.png")
 
 
         return layout

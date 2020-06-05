@@ -2,6 +2,6 @@
 <resources>
     <color name="colorPrimary">#09161d</color>
     <color name="colorPrimaryDark">#040b0f</color>
-    <color name="colorAccent">#0e242f</color>
-    <color name="forecast_item_background">#050d12</color>
+    <color name="colorAccent">#bfbfbf</color>
+    <color name="listItem_background">#DDDDDD</color>
 </resources>

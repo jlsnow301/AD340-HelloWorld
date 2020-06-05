@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_daily_forecast" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/locationEntryButton"
         android:layout_width="wrap_content"
